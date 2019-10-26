@@ -1,0 +1,95 @@
+\documentclass[a4paper, dutch]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[dutch]{babel}
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles
+\usepackage[style=ieee]{biblatex}
+\addbibresource{raspberry-pi.bib}
+\title{Vergelijking het Raspberry Pi- en Arduinoplatform}
+\subtitle{Papergroep 34}
+\subject{INFONW Paper}
+\author{
+    Wilmar Duvekot 6523617 \and Luuk Berkers 6793592 \and Jacob-Jan Mosselman
+    6675522 \and Kenneth Man 6007767 \and Herman Horneman 6897630
+}
+\date{28 oktober 2019}
+\ihead{\rightmark}
+\ohead{INFONW Paper}
+\addtokomafont{pagehead}{\upshape}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    Dit onderzoek probeert een antwoord te geven op de vraag of een Arduino of een Raspberry Pi een
+    betere mini-computer is.
+    Het onderzoek geeft daarop een antwoord en ook op de vraag wat de verschillen precies zijn.
+    De Arduino is een mini-computer die vooral handig kan zijn bij het automatiseren van processen,
+    en de Raspberry Pi is een iets uitgebreidere computer met wat meer aansluitingen beschikbaar.
+    Het grootste verschil is dat de Raspberry Pi een grotere processor heeft dan de Arduino.
+    Hieruit wordt geconcludeerd dat de Rapsberry Pi het beste gebruikt kan worden voor grote
+    opdrachten en dat de Arduino geschikt is voor kleinere, simpele opdrachten.
+\end{abstract}
+
+\tableofcontents
+
+\section{Inleiding}
+In de laatste decennia heeft technologie een enorme ontwikkeling doorgemaakt.
+Zo zijn de telefoons uitgevonden en zijn deze steeds kleiner, sneller en beter geworden.
+Televisie heeft kleur gekregen en er zijn steeds meer zenders te zien.
+Ook heeft de computer een enorme ontwikkeling doorgemaakt.
+De computers van vroeger konden klaslokalen vullen, maar tegenwoordig kunnen ze in een rugzak
+meegenomen worden.
+De laptop wordt steeds kleiner, steeds sneller en gaat ook steeds beter presteren.
+De technologie gaat tegenwoordig zelfs zo ver, dat een fotolijstje digitaal gemaakt kan worden,
+zodat mensen foto's naar het lijstje kunnen sturen en dat het lijstje die foto's dan laat zien, een
+voorbeeld daarvan is de Claudia digitale fotolijst \cite{innovu2019fotolijst}.
+
+De technologie wordt steeds kleiner en beter dus, dat is ook te zien aan de mini-computers.
+De Raspberry Pi \cite{raspberry2019raspberry} en de Arduino \cite{arduino2019arduino} zijn ongeveer
+even groot als een telefoon en ze kunnen veel.
+Het principe is hetzelfde als een laptop/computer.
+De computers kunnen worden geprogrammeerd, en ze kunnen in principe alles doen, zolang het
+geprogrammeerd wordt.
+De Arduino en Raspberry Pi zullen in dit onderzoek verder uitgelegd worden.
+
+Dit onderzoek zal gaan over de verschillen tussen de Arduino en Raspberry Pi, zodat duidelijk wordt
+wat met de mini-computers gedaan kan worden en wat het nut kan zijn in de samenleving.
+De onderzoeksvraag luidt: Wat zijn de verschillen tussen Raspberry Pi en Arduino en welke is beter?
+Op deze vraag zal een antwoord gevonden worden in dit paper.
+Dit paper zal beginnen met informatie over de Arduino, de architectuur, hardware, software en
+toepassingen.
+Vervolgens zal er worden verteld over de Raspberry Pi, architectuur, hardware, software en
+toepassingen.
+Daarna zullen verschillen en overeenkomsten besproken worden.
+Vervolgens volgt de conclusie en de appendix.
+
+% \section{Architectuur \& Hardware}
+% Beide platformen zijn bedoeld voor gebruik in projecten waarin een computer nodig is, maar niet heel
+% veel computer, dit is ook zichtbaar in het ontwerp van de hardware.
+% De afmeting van de Raspberry Pi 4 \cite{raspberry2019brief} zijn vergelijkbaar met verschillende
+% Arduinomodellen zoals de Arduino MEGA 2560 \cite{arduino2019mega} en de Arduino Uno
+% \cite{arduino2019uno}.
+% Daarnaast zijn er binnen beide platformen kleinere versies verkrijgbaar zoals de Raspberry Pi Zero
+% \cite{raspberry2019buy} en de Arduino Nano \cite{arduino2019products}.
+% De I/O van de Raspberry is bijvoorbeeld vergelijkbaar met de Arduino YÚN, deze heeft als een van de
+% weinige Arduino's maar net als de Raspberry Pi USB en Ethernet.
+% Deze Arduino is dan ook ontworpen om gebruikt te worden wanneer een internetverbinding nodig is
+% \cite{arduino2019yun}.
+
+% Arduino's zijn voorzien van een ATmega ARM microcontroller
+% \cite{arduino2019uno,arduino2019leonardo,arduino2019mega,arduino2019yun,kumar2015arduino} en
+% de Raspberry Pi 4 is voorzien van een quad-core Cortex-A72 ARM v8 processor
+% \cite{raspberry2019brief}.
+% Beide platformen gebruiken dus een ARM processor.
+% ARM (Advanced RISC machine) processors zijn RISC processors in dit valt dus goed samen met de
+% filosofie van deze producten om een simpele computer te zijn.
+
+% \section{Software}
+% Zoals eerder gezegd zijn beide platformen nuttig voor gebruik in projecten, zowel voor hobbyisten
+% als professionele toepassingen.
+% Beide platformen zijn dan ook heel makkelijk te programmeren en nuttig als middel om te leren
+% programmeren \cite{raspberry2015what,jamieson2011arduino,rubio2013using}.
+
+\printbibliography
+\end{document}
