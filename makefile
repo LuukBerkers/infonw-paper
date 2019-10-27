@@ -10,7 +10,7 @@ raspberry-pi.pdf: raspberry-pi.tex raspberry-pi.bib
 	pdflatex raspberry-pi
 
 show: raspberry-pi.pdf
-	okular raspberry-pi.pdf -p 7
+	okular raspberry-pi.pdf -p 6
 
 spell: raspberry-pi.tex
 	hunspell -d nl raspberry-pi.tex
