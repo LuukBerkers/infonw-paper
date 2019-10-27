@@ -1,6 +1,8 @@
-\documentclass[a4paper, dutch]{scrartcl}
+\documentclass[a4paper, dutch, draft, abstract=true]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[dutch]{babel}
+\usepackage{graphicx}
+\graphicspath{{./afbeeldingen/}}
 \usepackage[automark]{scrlayer-scrpage}
 \clearpairofpagestyles
 \usepackage[style=ieee]{biblatex}
@@ -27,7 +29,7 @@
     De Arduino is een mini-computer die vooral handig kan zijn bij het automatiseren van processen,
     en de Raspberry Pi is een iets uitgebreidere computer met wat meer aansluitingen beschikbaar.
     Het grootste verschil is dat de Raspberry Pi een grotere processor heeft dan de Arduino.
-    Hieruit wordt geconcludeerd dat de Rapsberry Pi het beste gebruikt kan worden voor grote
+    Hieruit wordt geconcludeerd dat de Raspberry Pi het beste gebruikt kan worden voor grote
     opdrachten en dat de Arduino geschikt is voor kleinere, simpele opdrachten.
 \end{abstract}
 
@@ -48,7 +50,7 @@ voorbeeld daarvan is de Claudia digitale fotolijst \cite{innovu2019fotolijst}.
 De technologie wordt steeds kleiner en beter dus, dat is ook te zien aan de mini-computers.
 De Raspberry Pi \cite{raspberry2019raspberry} en de Arduino \cite{arduino2019arduino} zijn ongeveer
 even groot als een telefoon en ze kunnen veel.
-Het principe is hetzelfde als een laptop/computer.
+Het principe is hetzelfde als een laptop of computer
 De computers kunnen worden geprogrammeerd, en ze kunnen in principe alles doen, zolang het
 geprogrammeerd wordt.
 De Arduino en Raspberry Pi zullen in dit onderzoek verder uitgelegd worden.
@@ -63,6 +65,73 @@ Vervolgens zal er worden verteld over de Raspberry Pi, architectuur, hardware, s
 toepassingen.
 Daarna zullen verschillen en overeenkomsten besproken worden.
 Vervolgens volgt de conclusie en de appendix.
+
+\section{Raspberry Pi}
+Zoals in het vorige stuk genoemd, is het nodig om de mogelijkheden van de Raspberry Pi te
+begrijpen om de onderzoeksvraag goed te beantwoorden.
+Dit zal gaan op dezelfde manier als de Arduino ook is uitgelegd.
+Eerst zal worden gekeken naar de architectuur en hardware.
+Vervolgens naar de software van een Raspberry Pi en op het eind zullen toepassingen en mogelijkheden
+besproken worden.
+
+\subsection{Architectuur \& Hardware}
+De Raspberry Pi is een volwaardige computer met een compact formaat.
+Hij bevat dezelfde componenten die een volledige desktop-pc ook bevat, met als voordeel dat hij in
+een broekzak past.
+Bijkomend nadeel is wel dat men een aparte monitor, muis en toetsenbord moet aanschaffen als men de
+Raspberry Pi als traditionele desktop computer wilt gebruiken.
+
+In tegenstelling tot traditionele desktop-pc's en laptops van de laatste 10 jaar is de Raspberry Pi
+niet voorzien van een x86 processor.
+De Raspberry Pi is voorzien van een ARM processor \cite{jain2014raspberry}.
+Er bestaan op het moment van schrijven verschillen versies.
+De Raspberry Pi 1 en Zero hebben een 32-bit architectuur, terwijl de Raspberry Pi's 2, 3 en 4 een
+64-bit architectuur hebben.
+Verder is de architectuur min of meer hetzelfde.
+Alle Raspberry Pi's draaien op basis van een ARM processor.
+
+Omdat er verschillende versies bestaan van de Raspberry Pi, wordt in dit paper de nadruk gelegd op
+de Raspberry Pi 4.
+Deze heeft een kloksnelheid van 1.5 GHz en een RAM van 1, 2 of 4 GB.
+Afhankelijk van het Raspberry Pi 4 model dat men gekocht heeft, zal het RAM geheugen verschillend
+zijn.
+Kloksnelheid is wel voor alle modellen van de Raspberry Pi 4 hetzelfde.
+Verder heeft hij in totaal vier USB poorten.
+Namelijk twee USB 2.0 en 2 USB 3.0 poorten.
+Ook heeft de Raspberry Pi 4 een Ethernet aansluiting waarmee een internetverbinding mogelijk is,
+maar ook een directe verbinding met een andere computer \cite{maksimovic2014raspberry}.
+Voor een internetverbinding beschikt de Raspberry Pi ook over Wi-Fi functionaliteit.
+
+\subsection{Software}
+Afhankelijk van het besturingssysteem dat draait op de Raspberry Pi 4, zijn een aantal software al
+geïnstalleerd.
+Men kan er ook voor kiezen om een versie te installeren zonder deze voorgeïnstalleerde software.
+De Raspberry Pi Foundation ontwikkelt zelf een besturingssysteem voor de Raspberry Pi.
+Dit besturingssysteem heet Raspbian en is gebaseerd op Debian.
+In figuur \ref{fig:raspbian} is het bureaublad weergegeven van de versie van Raspbian met een
+desktopomgeving.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{raspbian.png}
+    \caption{Raspbian desktopomgeving}
+    \label{fig:raspbian}
+\end{figure}
+
+Er is in dit paper ervoor gekozen om Raspbian te installeren met voor-geïnstalleerde software.
+Als men met de muis klikt op de framboos in de linkerbovenhoek, dan zal men verschillende software
+aantreffen zoals te zien is in figuur \ref{fig:raspbian-libreoffice}.
+Zo is bijvoorbeeld te zien dat Raspbian beschikt over LibreOffice.
+Dit is tekstverwerkingssoftware vergelijkbaar met Microsoft Office.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{raspbian-libreoffice.png}
+    \caption{Raspbian heeft LibreOffice als kantoorsoftwarepakket}
+    \label{fig:raspbian-libreoffice}
+\end{figure}
+
+Naast tekstverwerkingssoftware is er ook een browser.
+Standaard in Raspbian is de Chromium Web Browser.
+Ook bevat Raspbian een Terminal applicatie waarin men via commando's opdrachten kan uitvoeren.
 
 % \section{Architectuur \& Hardware}
 % Beide platformen zijn bedoeld voor gebruik in projecten waarin een computer nodig is, maar niet heel
