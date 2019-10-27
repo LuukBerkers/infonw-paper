@@ -16,4 +16,4 @@ spell: raspberry-pi.tex
 	hunspell -d nl raspberry-pi.tex
 
 clean:
-	rm (ls * | grep -vE "makefile|*.tex|*.bib|*.pdf")
+	rm (ls * | grep -vE "makefile|*.tex|*.bib|*.pdf|afbeeldingen|*.png")
