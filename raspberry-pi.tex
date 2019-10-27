@@ -112,6 +112,18 @@ maar ook een directe verbinding met een andere computer \cite{maksimovic2014rasp
 Voor een internetverbinding beschikt de Raspberry Pi ook over wifi functionaliteit.
 
 \subsection{Software}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{raspbian.png}
+    \caption{Raspbian desktopomgeving}
+    \label{fig:raspbian}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{raspbian-libreoffice.png}
+    \caption{Raspbian heeft LibreOffice als kantoorsoftwarepakket}
+    \label{fig:raspbian-libreoffice}
+\end{figure}
 Afhankelijk van het besturingssysteem dat draait op de Raspberry Pi 4, zijn een aantal software al
 ge{\"i}nstalleerd.
 Men kan er ook voor kiezen om een versie te installeren zonder deze voorge{\"i}nstalleerde software.
@@ -119,30 +131,24 @@ De Raspberry Pi Foundation ontwikkelt zelf een besturingssysteem voor de Raspber
 Dit besturingssysteem heet Raspbian en is gebaseerd op Debian.
 In figuur \ref{fig:raspbian} is het bureaublad weergegeven van de versie van Raspbian met een
 desktopomgeving.
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.5]{raspbian.png}
-    \caption{Raspbian desktopomgeving}
-    \label{fig:raspbian}
-\end{figure}
 
 Er is in dit paper ervoor gekozen om Raspbian te installeren met voorge{\"i}nstalleerde software.
 Als men met de muis klikt op de framboos in de linkerbovenhoek, dan zal men verschillende software
 aantreffen zoals te zien is in figuur \ref{fig:raspbian-libreoffice}.
 Zo is bijvoorbeeld te zien dat Raspbian beschikt over LibreOffice.
 Dit is tekstverwerkingssoftware vergelijkbaar met Microsoft Office.
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.5]{raspbian-libreoffice.png}
-    \caption{Raspbian heeft LibreOffice als kantoorsoftwarepakket}
-    \label{fig:raspbian-libreoffice}
-\end{figure}
 
 Naast tekstverwerkingssoftware is er ook een browser.
 Standaard in Raspbian is de Chromium Web Browser.
 Ook bevat Raspbian een Terminal applicatie waarin men via commando's opdrachten kan uitvoeren.
 
 \subsection{Mogelijkheden \& Toepassingen}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.25]{raspbian-memory.png}
+    \caption{Memory spel in Raspbian}
+    \label{fig:raspbian-memory}
+\end{figure}
 Zoals al eerder gezegd is Raspberry Pi 4 een volledige computer.
 Het enige verschil is dat hij in een formaat van een creditcard is.
 Hij is dus erg compact en makkelijk te verwerken in allerlei projecten.
@@ -159,39 +165,56 @@ De simpele basistaken zoals tekstverwerking, internet en zeer lichte spelletjes 
 mogelijk.
 Ter illustratie is in figuur \ref{fig:raspbian-memory} een simpele Memory spel te zien dat te spelen
 is in Raspbian.
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.25]{raspbian-memory.png}
-    \caption{Memory spel in Raspbian}
-    \label{fig:raspbian-memory}
-\end{figure}
 
-% \section{Architectuur \& Hardware}
-% Beide platformen zijn bedoeld voor gebruik in projecten waarin een computer nodig is, maar niet heel
-% veel computer, dit is ook zichtbaar in het ontwerp van de hardware.
-% De afmeting van de Raspberry Pi 4 \cite{raspberry2019brief} zijn vergelijkbaar met verschillende
-% Arduinomodellen zoals de Arduino MEGA 2560 \cite{arduino2019mega} en de Arduino Uno
-% \cite{arduino2019uno}.
-% Daarnaast zijn er binnen beide platformen kleinere versies verkrijgbaar zoals de Raspberry Pi Zero
-% \cite{raspberry2019buy} en de Arduino Nano \cite{arduino2019products}.
-% De I/O van de Raspberry is bijvoorbeeld vergelijkbaar met de Arduino YÚN, deze heeft als een van de
-% weinige Arduino's maar net als de Raspberry Pi USB en Ethernet.
-% Deze Arduino is dan ook ontworpen om gebruikt te worden wanneer een internetverbinding nodig is
-% \cite{arduino2019yun}.
+\section{Overeenkomsten en Verschillen}
+In de vorige stukken zijn de eigenschappen, mogelijkheden en toepassingen van het Raspberry Pi- en
+Arduino platform besproken.
+In dit stuk zullen we de platformen vergelijken en de verschillen en overeenkomsten bespreken.
+Deze bevindingen kunnen we dan vervolgens in de conclusie gebruiken om onze onderzoeksvraag te
+beantwoorden.
 
-% Arduino's zijn voorzien van een ATmega ARM microcontroller
-% \cite{arduino2019uno,arduino2019leonardo,arduino2019mega,arduino2019yun,kumar2015arduino} en
-% de Raspberry Pi 4 is voorzien van een quad-core Cortex-A72 ARM v8 processor
-% \cite{raspberry2019brief}.
-% Beide platformen gebruiken dus een ARM processor.
-% ARM (Advanced RISC machine) processors zijn RISC processors in dit valt dus goed samen met de
-% filosofie van deze producten om een simpele computer te zijn.
+\subsection{Architectuur \& Hardware}
+Beide platformen zijn bedoeld voor gebruik in projecten waarin een computer nodig is, maar niet te
+veel computer, dit is ook zichtbaar in het ontwerp van de hardware.
+De afmeting van de Raspberry Pi 4 \cite{raspberry2019brief} zijn vergelijkbaar met verschillende
+Arduino modellen, zoals de Arduino MEGA 2560 \cite{arduino2019mega} en de Arduino Uno
+\cite{arduino2019uno}.
+Daarnaast zijn er binnen beide platformen kleinere versies verkrijgbaar zoals de Raspberry Pi Zero
+\cite{raspberry2019buy} en de Arduino Nano \cite{arduino2019products}.
+Dit laat een belangrijke overeenkomst tussen de twee platformen zien, namelijk de focus op
+compactheid.
+Dit zorgt er voor dat de apparaten verwerkt kunnen worden in allerlei projecten, maar ook maakt het
+de platformen toegankelijk voor niet-professionele toepassingen.
+Denk aan hobbyisten die geen computer willen toewijden aan 1 taak, laat staan een serverkast gaan
+opstellen.
+
+De I/O van de Raspberry Pi, die bestaat uit USB, Micro HDMI en Ethernet \cite{raspberry20194bspecs},
+is niet vergelijkbaar met bijvoorbeeld de Arduino Uno of MEGA 2560.
+Bij Arduino's is de I/O vooral gebaseerd op digitale input/output pins
+\cite{arduino2019mega,arduino2019uno}.
+De I/O van de Raspberry Pi is wel vergelijkbaar met die van de Arduino Y{\'U}N, deze heeft als een
+van de weinige Arduino's USB en Ethernet.
+Deze Arduino is dan ook ontworpen om gebruikt te worden wanneer een internetverbinding nodig is
+\cite{arduino2019yun}.
+Dit laat een verschil zien in de doeleinden waarvoor de computers binnen de platformen ontworpen
+zijn.
+De Arduino is nuttig wanneer I/O op laag niveau nodig is, met volledige controle over elke bit van
+in- en uitvoer.
+De Raspberry Pi heeft de mogelijkheid om op een netwerk aangesloten te worden, en ook kan er
+standaard USB-randapparatuur op aangesloten worden, dit maakt de Raspberry Pi nuttig voor projecten
+waarbij I/O op hoger niveau nodig is.
+Het verschil is ook niet vreemd wanneer rekening gehouden wordt met het feit dat de Raspberry Pi een
+OS heeft om deze I/O aan te sturen, terwijl de Arduino dit niet heeft.
+\\
 
 % \section{Software}
 % Zoals eerder gezegd zijn beide platformen nuttig voor gebruik in projecten, zowel voor hobbyisten
 % als professionele toepassingen.
 % Beide platformen zijn dan ook heel makkelijk te programmeren en nuttig als middel om te leren
 % programmeren \cite{raspberry2015what,jamieson2011arduino,rubio2013using}.
+
+De overeenkomsten en verschillen zijn nu benoemd en uitgelegd, deze zullen worden gebruikt in het
+volgende hoofdstuk, dat zal de conclusie zijn.
 
 \printbibliography
 \end{document}
