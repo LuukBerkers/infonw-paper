@@ -83,6 +83,102 @@ Dit is lang niet vergelijkbaar met het de hoeveelheid RAM in moderne pc's en lap
 Dat is namelijk vele malen meer, maar voor een Arduino niet nodig gezien het doel waarmee de Arduino
 geproduceerd wordt.
 
+In het RAM worden processen ingeladen die uitgevoerd moeten gaan worden, maar er kan geen data
+permanent worden opgeslagen.
+Om toch data permanent op te slaan wordt een SD kaartje gebruikt.
+De Arduino heeft ook de mogelijkheid om gekoppeld te worden aan een computer, waarbij de gegevens
+van de Arduino op de harde schijf van de desbetreffende computer gezet kunnen worden.
+De Arduino heeft geen videokaart aangesloten zitten en is dus niet bedoeld om data te tonen op een
+beeldscherm.
+
+Verder heeft de Arduino meerdere input/output pins.
+Op de inputs worden sensoren aangesloten die verschillende waardes meten en deze aan de Arduino
+meegeven.
+Op de output wordt een actor aangesloten die met bepaalde berekeningen of uitkomsten uit de Arduino
+een actie uitvoert.
+Tussen de input en de output berekent de geschreven software iets met de data verkregen uit de input
+en stuurt ook de actor aan \cite{arduinoreference}.
+
+De hardware is opensource, dat betekent dat willekeurige producenten het recht hebben om Arduino te
+produceren en te verkopen.
+Alleen de naam Arduino mag niet zonder meer gebruikt worden.
+
+De Arduino is standaard voorzien van een bootloader \cite{optiboot2019github}, dit vergemakkelijkt
+het proces om code werkend op de Arduino te krijgen.
+Bij het starten van de Arduino wordt de bootloader gestart en deze wacht op de aangesloten computer
+om een nieuw stuk software te ontvangen.
+% ? Welk geheugen wordt hier bedoeld?
+Zodra er nieuwe software wordt ontvangen zal deze worden weggeschreven in het geheugen van de
+Arduino zodat deze later opnieuw kan worden uitgevoerd zonder dat de hoofdcomputer aangesloten hoeft
+te zijn aan de Arduino.
+
+\subsection{Software}
+Zoals al gezegd zijn de meeste Arduino boards uitgerust met een singlecoreprocessor.
+De Arduino is bedoeld om simpele programma's te laten runnen om een elektronicaproject aan te
+sturen.
+Hiervoor is meestal een single core processor genoeg.
+Wanneer de projecten echter groter worden, dan kan het handig zijn om verschillende taken parallel
+uit te gaan voeren, zolang die taken maar niet achtereenvolgens uitgevoerd moeten worden kan dat
+heel goed.
+Het voordeel hiervan is dat dezelfde taken in een kortere periode uitgevoerd kunnen worden.
+Om deze processen parallel uit te voeren is er een multicore processor nodig.
+
+Zoals gezegd is heeft de Arduino erg weinig RAM vergeleken met moderne pc's, het is ook niet nodig
+om meer RAM te hebben voor een Arduino omdat deze er op gebouwd is om kleine elektronicaprojecten
+aan te sturen.
+Hij doet dus kleine berekeningen en opdrachten en hoeft geen zware taken uit te voeren zoals het
+aansturen van een beeldscherm.
+Dit kan ook niet, onder andere omdat de Arduino geen videokaart heeft en hij is er ook niet voor
+bedoeld om data op een beeldscherm te visualiseren.
+
+De software programmeert men op een laptop of pc en laad je via een USB-kabel op de Arduino.
+Het programmeren gebeurt met behulp van de Arduino IDE.
+Dit staat voor Integrated Development Environment en is een volledige programmeeromgeving.
+Arduino heeft zijn eigen programmeertaal ontwikkeld, deze is gebaseerd op C en C++.
+De IDE van Arduino is ook opensource \cite{arduino2019github}, dus men kan eigen aanpassingen
+doorvoeren in het programma.
+
+Je kan ook ISP gebruiken om je software op je Arduino te zetten.
+ISP staat voor in-system programming.
+Dit houd in dat de chip op de Arduino blijft zitten en alle componenten aangesloten blijven.
+Waarna vervolgens de chip wordt geprogrammeerd door een andere Arduino.
+
+\subsection{Mogelijkheden \& Toepassingen}
+Zoals al eerder gezegd is de Arduino echt bedoeld om elektronicaprojecten aan te sturen.
+Gegevens van de buitenwereld door middel van sensoren meten, waardes berekenen en vervolgens andere
+hardware aansturen aan de hand van die waardes.
+
+Er zijn tal van mogelijkheden met de Arduino, zo wordt hij vaak gebruikt om een smart home te
+realiseren.
+Lampen, wekkers, rookmelders, gordijnen, deuren etc. etc. worden aangesloten op een Arduino en vanaf
+daar bestuurd.
+Zo kan je de Arduino verbinden aan je netwerk en switches omzetten vanaf je telefoon. 
+
+Ook wordt de Arduino gebruikt om bepaalde processen te automatiseren, bijvoorbeeld het voeren van
+katten.
+Heel simpel kan de Arduino eens om de zoveel tijd eten in een bakje bijvullen.
+Ook kan met een sensor eerst nog even gecheckt worden of er nog eten in zit.
+Zo ja, dan hoeft het eten niet bijgevuld te worden.
+
+Er kunnen ook camera's op een Arduino worden aangesloten.
+Men kan bijvoorbeeld een Arduino monteren op een bestuurbare auto en door het juiste programmeerwerk
+uit te voeren kan men de auto autonoom maken.
+Dit is echter wel een project voor gevorderden aangezien hier kunstmatige intelligentie bij komt
+kijken.
+Men kan echter ook zelf de auto besturen en de arduinoobjecten laten herkennen.
+Zo kan een seintje gegeven worden als een bepaald object gespot wordt.
+
+Een andere toepassing is het beveiligen van objecten met behulp van een vingerafdrukscanner.
+De input is een vingerafdruk.
+Als de Arduino de vingerafdruk kan matchen met een vingerafdruk in een database die in het systeem
+staat, wordt toegang verleend.
+Zo kan een deur van het slot opengaan, een garagedeur automatisch openen, toegang geven tot kastjes
+en/of diepvriezen.
+
+Met een Arduino kan men ook lasersnijden.
+Men geeft aan de Arduino mee welke vormen er gesneden moeten worden en de Arduino loopt keurig die
+vorm af en snijdt zo het gewenste stuk uit een plaatje van een bepaald materiaal.
+
 \paragraph*{}
 Er is nu bekend wat de Arduino kan en hoe deze werkt
 Om de onderzoeksvraag volledig te kunnen beantwoorden is het goed om zowel over de Arduino als over
@@ -228,7 +324,8 @@ ARM (Advanced RISC machine) processors zijn RISC processors en dit valt dus goed
 filosofie van deze producten om de computer simpel te houden.
 Een belangrijk verschil is wel dat de Arduino's een 8-bits single-core processor hebben terwijl de
 Raspberry Pi 4 een 64-bits quad-core processor heeft \cite{raspberry2019brief}.
-\\
+% opslag
+% beeld
 
 \subsection{Software}
 Zoals eerder gezegd zijn beide platformen nuttig voor gebruik in projecten, zowel voor hobbyisten
@@ -236,7 +333,7 @@ als professionele toepassingen.
 Beide platformen zijn dan ook heel makkelijk te programmeren en nuttig als middel om te leren
 programmeren \cite{raspberry2015what,jamieson2011arduino,rubio2013using}.
 
-\subsection{Mogelijkheden \& Tdoepassingen}
+\subsection{Mogelijkheden \& Toepassingen}
 Als het gaat om automatisering en elektrische schakelingen, dan is de Arduino een betere keus.
 Echter is de Raspberry Pi een volwaardige computer in tegenstelling tot de Arduino.
 De Arduino kan binnenkomende gegevens van verschillende inputs verwerken en daarmee iets anders
