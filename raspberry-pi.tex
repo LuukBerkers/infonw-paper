@@ -71,9 +71,9 @@ Vervolgens wordt er gekeken naar de software van de Arduino en er wordt als laat
 toepassingen en mogelijkheden.
 
 \subsection{Architectuur \& Hardware}
-De Arduino is een single board computer en bestaat uit de basis van alle componenten waar een
+De Arduino is een singleboardcomputer en bestaat uit de basis van alle componenten waar een
 hedendaagse computer ook uit bestaat, zoals een processor, RAM en I/O.
-De meeste Arduinos hebben een single core processor maar er zijn ook wel multicore Arduinos
+De meeste Arduinos hebben een singlecoreprocessor maar er zijn ook wel multicore Arduinos
 verkrijgbaar.
 Deze Arduinos met multicoreprocessors zijn vooral nuttig voor het parallel uitvoeren van
 verschillende taken.
@@ -113,10 +113,10 @@ Arduino zodat deze later opnieuw kan worden uitgevoerd zonder dat de hoofdcomput
 te zijn aan de Arduino.
 
 \subsection{Software}
-Zoals al gezegd zijn de meeste Arduino boards uitgerust met een singlecoreprocessor.
+Zoals al gezegd zijn de meeste arduinoborden uitgerust met een singlecoreprocessor.
 De Arduino is bedoeld om simpele programma's te laten runnen om een elektronicaproject aan te
 sturen.
-Hiervoor is meestal een single core processor genoeg.
+Hiervoor is meestal een singlecoreprocessor genoeg.
 Wanneer de projecten echter groter worden, dan kan het handig zijn om verschillende taken parallel
 uit te gaan voeren, zolang die taken maar niet achtereenvolgens uitgevoerd moeten worden kan dat
 heel goed.
@@ -152,7 +152,7 @@ Er zijn tal van mogelijkheden met de Arduino, zo wordt hij vaak gebruikt om een 
 realiseren.
 Lampen, wekkers, rookmelders, gordijnen, deuren etc. etc. worden aangesloten op een Arduino en vanaf
 daar bestuurd.
-Zo kan je de Arduino verbinden aan je netwerk en switches omzetten vanaf je telefoon. 
+Zo kan je de Arduino verbinden aan je netwerk en switches omzetten vanaf je telefoon.
 
 Ook wordt de Arduino gebruikt om bepaalde processen te automatiseren, bijvoorbeeld het voeren van
 katten.
@@ -165,7 +165,7 @@ Men kan bijvoorbeeld een Arduino monteren op een bestuurbare auto en door het ju
 uit te voeren kan men de auto autonoom maken.
 Dit is echter wel een project voor gevorderden aangezien hier kunstmatige intelligentie bij komt
 kijken.
-Men kan echter ook zelf de auto besturen en de arduinoobjecten laten herkennen.
+Men kan echter ook zelf de auto besturen en de arduino{\"o}bjecten laten herkennen.
 Zo kan een seintje gegeven worden als een bepaald object gespot wordt.
 
 Een andere toepassing is het beveiligen van objecten met behulp van een vingerafdrukscanner.
@@ -322,16 +322,26 @@ Raspberry Pi 4 is voorzien van een quad-core Cortex-A72 ARMv8 processor \cite{ra
 Beide platformen gebruiken dus een ARM processor.
 ARM (Advanced RISC machine) processors zijn RISC processors en dit valt dus goed samen met de
 filosofie van deze producten om de computer simpel te houden.
-Een belangrijk verschil is wel dat de Arduino's een 8-bits single-core processor hebben terwijl de
+Een belangrijk verschil is wel dat de Arduino's een 8-bits singlecoreprocessor hebben terwijl de
 Raspberry Pi 4 een 64-bits quad-core processor heeft \cite{raspberry2019brief}.
 % opslag
 % beeld
 
 \subsection{Software}
+De software is misschien wel het belangrijkste verschil tussen de twee platformen.
 Zoals eerder gezegd zijn beide platformen nuttig voor gebruik in projecten, zowel voor hobbyisten
 als professionele toepassingen.
 Beide platformen zijn dan ook heel makkelijk te programmeren en nuttig als middel om te leren
 programmeren \cite{raspberry2015what,jamieson2011arduino,rubio2013using}.
+Toch is de manier hoe naar software gekeken wordt fundamenteel anders.
+De Arduino heeft geen OS, de enige software die de Arduino uitvoert is dat wat de gebruiker op de
+bootloader heeft gezet.
+De Raspberry Pi heeft een OS.
+De gebruiker kan zelf programma's schrijven en op het OS uitvoeren, of andere software gebruiken
+uit de respository's van het OS.
+Het gebruik van een Raspberry Pi lijkt dus veel op dat van een gewone computer.
+De Arduino is niet interactief, de gebruiker zet zijn programma op de bootloader, en de Arduino
+voert het uit.
 
 \subsection{Mogelijkheden \& Toepassingen}
 Als het gaat om automatisering en elektrische schakelingen, dan is de Arduino een betere keus.
@@ -371,7 +381,7 @@ De twee mini-computers verschillen veel van elkaar.
 Het is daarom lastig te zeggen welke van de twee het beste is.
 Het grootste verschil zit in het besturingssysteem en in de processor.
 De Raspberry Pi gebruikt een besturingssysteem en heeft een 64-bits quad-core processor, terwijl de
-Arduino geen besturingssysteem heeft en een 8-bits single-core processor.
+Arduino geen besturingssysteem heeft en een 8-bits singlecoreprocessor.
 Dit is het grootste noemenswaardige verschil en dit leidt tot de conclusie dat de Raspberry Pi beter
 gebruikt kan worden voor grotere, zwaardere projecten, terwijl de Arduino het best gebruikt kan
 worden voor wat lichtere en kleine projecten.
