@@ -83,15 +83,19 @@ Dit is lang niet vergelijkbaar met het de hoeveelheid RAM in moderne pc's en lap
 Dat is namelijk vele malen meer, maar voor een Arduino niet nodig gezien het doel waarmee de Arduino
 geproduceerd wordt.
 
-In het RAM worden processen ingeladen die uitgevoerd moeten gaan worden, maar er kan geen data
-permanent worden opgeslagen.
-Om toch data permanent op te slaan wordt een SD kaartje gebruikt.
+In het RAM worden processen ingeladen die uitgevoerd moeten gaan worden, maar er kan geen I/O data
+permanent worden opgeslagen. 
+Om toch I/O data permanent op te slaan wordt een SD kaartje gebruikt.  
 De Arduino heeft ook de mogelijkheid om gekoppeld te worden aan een computer, waarbij de gegevens
 van de Arduino op de harde schijf van de desbetreffende computer gezet kunnen worden.
-De Arduino heeft geen videokaart aangesloten zitten en is dus niet bedoeld om data te tonen op een
-beeldscherm.
+In de nieuwere Arduinos kan wel data permanent worden opgeslagen. Daar wordt EEPROM voor gebruikt.
+Er is ook flash memory aanwezig op de Arduino, deze wordt gebruikt om de programmas op te slaan 
+zonder dat deze verloren gaan bij het opnieuw opstarten van de Arduino.
+In tegenstelling tot RAM, waar alle data gewist wordt bij het herstarten.
+Verder heeft de Arduino geen videokaart aangesloten zitten en kan niet gebruikt worden om data te visualiseren op een beeldscherm.
+Daar is de Arduino dan ook niet voor bedoeld.
 
-Verder heeft de Arduino meerdere input/output pins.
+Hiernaast heeft de Arduino meerdere input/output pins.
 Op de inputs worden sensoren aangesloten die verschillende waardes meten en deze aan de Arduino
 meegeven.
 Op de output wordt een actor aangesloten die met bepaalde berekeningen of uitkomsten uit de Arduino
@@ -99,7 +103,7 @@ een actie uitvoert.
 Tussen de input en de output berekent de geschreven software iets met de data verkregen uit de input
 en stuurt ook de actor aan \cite{arduinoreference}.
 
-De hardware is opensource, dat betekent dat willekeurige producenten het recht hebben om Arduino te
+De hardware is open source, dat betekent dat willekeurige producenten het recht hebben om Arduino te
 produceren en te verkopen.
 Alleen de naam Arduino mag niet zonder meer gebruikt worden.
 
@@ -133,9 +137,9 @@ bedoeld om data op een beeldscherm te visualiseren.
 
 De software programmeert men op een laptop of pc en laad je via een USB-kabel op de Arduino.
 Het programmeren gebeurt met behulp van de Arduino IDE.
-Dit staat voor Integrated Development Environment en is een volledige programmeeromgeving.
+IDE staat voor Integrated Development Environment en is een volledige programmeeromgeving.
 Arduino heeft zijn eigen programmeertaal ontwikkeld, deze is gebaseerd op C en C++.
-De IDE van Arduino is ook opensource \cite{arduino2019github}, dus men kan eigen aanpassingen
+De IDE van Arduino is ook open source \cite{arduino2019github}, dus men kan eigen aanpassingen
 doorvoeren in het programma.
 
 Je kan ook ISP gebruiken om je software op je Arduino te zetten.
