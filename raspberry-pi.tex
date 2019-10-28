@@ -1,6 +1,7 @@
 \documentclass[a4paper, dutch, abstract=true]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[dutch]{babel}
+\usepackage{eurosym}
 \usepackage{graphicx}
 \graphicspath{{./afbeeldingen/}}
 \usepackage[automark]{scrlayer-scrpage}
@@ -68,8 +69,21 @@ Dit paper zal beginnen met te vertellen hoe een Arduino in elkaar zit.
 Dit zal gebeuren aan de hand van de architectuur en de hardware van de Arduino.
 Vervolgens wordt er gekeken naar de software van de Arduino en er wordt als laatst gekeken naar de
 toepassingen en mogelijkheden.
-\\
 
+\subsection{Architectuur \& Hardware}
+De Arduino is een single board computer en bestaat uit de basis van alle componenten waar een
+hedendaagse computer ook uit bestaat, zoals een processor, RAM en I/O.
+De meeste Arduinos hebben een single core processor maar er zijn ook wel multicore Arduinos
+verkrijgbaar.
+Deze Arduinos met multicoreprocessors zijn vooral nuttig voor het parallel uitvoeren van
+verschillende taken.
+De hoeveelheid RAM verschilt per Arduino en loopt van minimaal 8 kB tot maximaal 32 kB aan RAM
+\cite{arduino2019products}.
+Dit is lang niet vergelijkbaar met het de hoeveelheid RAM in moderne pc's en laptops.
+Dat is namelijk vele malen meer, maar voor een Arduino niet nodig gezien het doel waarmee de Arduino
+geproduceerd wordt.
+
+\paragraph*{}
 Er is nu bekend wat de Arduino kan en hoe deze werkt
 Om de onderzoeksvraag volledig te kunnen beantwoorden is het goed om zowel over de Arduino als over
 de Raspberry Pi informatie te hebben.
@@ -216,12 +230,38 @@ Een belangrijk verschil is wel dat de Arduino's een 8-bits single-core processor
 Raspberry Pi 4 een 64-bits quad-core processor heeft \cite{raspberry2019brief}.
 \\
 
-% \subsection{Software}
-% Zoals eerder gezegd zijn beide platformen nuttig voor gebruik in projecten, zowel voor hobbyisten
-% als professionele toepassingen.
-% Beide platformen zijn dan ook heel makkelijk te programmeren en nuttig als middel om te leren
-% programmeren \cite{raspberry2015what,jamieson2011arduino,rubio2013using}.
+\subsection{Software}
+Zoals eerder gezegd zijn beide platformen nuttig voor gebruik in projecten, zowel voor hobbyisten
+als professionele toepassingen.
+Beide platformen zijn dan ook heel makkelijk te programmeren en nuttig als middel om te leren
+programmeren \cite{raspberry2015what,jamieson2011arduino,rubio2013using}.
 
+\subsection{Mogelijkheden \& Tdoepassingen}
+Als het gaat om automatisering en elektrische schakelingen, dan is de Arduino een betere keus.
+Echter is de Raspberry Pi een volwaardige computer in tegenstelling tot de Arduino.
+De Arduino kan binnenkomende gegevens van verschillende inputs verwerken en daarmee iets anders
+aansturen via een output.
+De Raspberry Pi lijkt meer op een volwaardige computer, maar dan sterk gereduceerd.
+Een Raspberry Pi kan dingen doen als tekstverwerking, internetten via een browser of kleine games
+draaien.
+Zo heeft de Raspberry Pi veel meer aansluitingen voor randapparatuur en is de Arduino daar zeer
+beperkt in.
+Een voorbeeld is dat de Raspberry Pi standaard al voorzien is van een Ethernet aansluiting,
+terwijl dit bij Arduino niet het geval is.
+
+\subsection{Kosten}
+De kosten voor een Raspberry Pi of de Arduino zijn zeer wisselend.
+In beide gevallen hangt het er volledig van af welke generatie of versie men aanschaft.
+Arduino verkoopt ontzettend veel verschillende printplaatjes die kunnen verschillen van ongeveer
+\euro10 tot ongeveer \euro60 \cite{arduino2019arduino}.
+De Raspberry Pi heeft een iets kleiner aanbod.
+Hier zijn de prijzen ongeveer tussen \euro20--\euro60.
+De uitzonderingen zijn de \emph{low budget} varianten: de Raspberry Pi Zero en de Raspberry Pi Zero W, die
+respectievelijk \euro5 en \euro10 kosten \cite{kiwi2019zoeken}.
+Uiteraard kan men er zoveel geld aan uitgeven als men wilt, aangezien er veel accessoires kunnen
+worden toegevoegd aan zowel de Arduino als de Raspberry Pi.
+
+\paragraph*{}
 De overeenkomsten en verschillen zijn nu benoemd en uitgelegd, deze zullen worden gebruikt in het
 volgende hoofdstuk, dat zal de conclusie zijn.
 
